@@ -57,7 +57,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.get("/", (req, res) => {
   res.end("Welcome to tesoc backend");
 });
-const PORT = process.env.port || 8000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Serve is running on port:${PORT}`);
 });
