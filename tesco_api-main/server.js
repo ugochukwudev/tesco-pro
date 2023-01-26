@@ -1,5 +1,5 @@
 const express = require("express");
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 const db = require("./database/db");
 const TeacherRoute = require("./route/Teacher_route");
 const swaggerUi = require("swagger-ui-express");
