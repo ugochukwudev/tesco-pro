@@ -28,13 +28,7 @@ app.use((req, res, next) => {
 //   });
 //   next();
 // });
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-    optionSuccessStatus: 200,
-  })
-);
+app.use(cors());
 
 //Here is the APi of the different routing
 app.use("/api", TeacherRoute);
