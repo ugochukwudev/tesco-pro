@@ -1,4 +1,5 @@
 const express = require("express");
+import dotenv from "dotenv";
 const db = require("./database/db");
 const TeacherRoute = require("./route/Teacher_route");
 const swaggerUi = require("swagger-ui-express");
@@ -11,6 +12,7 @@ const Admin_Router = require("./route/Amin_route");
 const Result_Router = require("./route/Result_route");
 const app = express();
 const PORT = process.env.port || 8000;
+dotenv.config();
 app.use(express.json());
 
 app.use((req, res, next) => {
