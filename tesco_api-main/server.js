@@ -11,7 +11,7 @@ const Question_Router = require("./route/Question_route");
 const Admin_Router = require("./route/Amin_route");
 const Result_Router = require("./route/Result_route");
 const app = express();
-const PORT = process.env.port || 8000;
+
 dotenv.config();
 app.use(express.json());
 
@@ -57,6 +57,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.get("/", (req, res) => {
   res.end("Welcome to tesoc backend");
 });
+const PORT = process.env.port || 8000;
 app.listen(PORT, () => {
   console.log(`Serve is running on port:${PORT}`);
 });
